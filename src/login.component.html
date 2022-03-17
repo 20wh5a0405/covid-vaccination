@@ -1,0 +1,20 @@
+
+<div class="bg-img">
+    <div class="container" style="width:500px">
+      <!-- <form method="post" action="/addname"> -->
+      <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm.value)">
+        <!-- class="container"> -->
+        <h1>Login</h1>
+          <label>Email</label><br>
+          <input type="text" ngModel name="email" #email=ngModel
+  placeholder="Enter your email..." required><br>
+          <label>Password</label><br>
+          <input type="password" ngModel name="password"
+  #password=ngModel placeholder="Enter password..." required><br>
+          <button type="submit" class="btn" >Login</button><br>
+          <a routerLink="/register">New User?</a>
+          <!-- <button type="submit" class="btn" (click)='checkPwd()'>
+  Register </button> -->
+      </form>
+    </div>
+  </div>
